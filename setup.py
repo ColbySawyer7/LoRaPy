@@ -2,14 +2,14 @@ from distutils.core import setup
 setup(
   name = 'LoRaPy',         # How you named your package folder (MyLib)
   packages = ['LoRaPy'],   # Chose the same as "name"
-  version = '0.1',      # Start with a small number and increase it with every change you make
+  version = '0.2',      # Start with a small number and increase it with every change you make
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'Implementation of the LoRaWAN intended to connect to the Things Network Stack (V2-V3)',   # Give a short description about your library
   author = 'Colby Sawyer',                   # Type in your name
   author_email = 'sawyerco21@ecu.edu',      # Type in your E-Mail
   url = 'https://github.com/ColbySawyer7/LoRaPy',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/ColbySawyer7/LoRaPy/archive/refs/tags/v_0.1.tar.gz',    # I explain this later on
-  keywords = ['SOME', 'MEANINGFULL', 'KEYWORDS'],   # Keywords that define your package best
+  download_url = 'https://github.com/ColbySawyer7/LoRaPy/archive/refs/tags/V_0.2.tar.gz',    # I explain this later on
+  keywords = ['LoRaWAN', 'Lora', 'Things Network', 'TTN', 'v3'],   # Keywords that define your package best
   install_requires=[            # I get to this in a second
           'time',
           'RPi.GPIO',

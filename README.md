@@ -4,11 +4,11 @@
 ![TTN: v2](https://img.shields.io/badge/TTN-v2-success)
 ![TTN: v3](https://img.shields.io/badge/TTN-v3-success)
 ![Adafruit: 4074](https://img.shields.io/badge/Adafruit-4074-success)
-![Lora: 868MHz](https://img.shields.io/badge/Lora-868MHz-success)
+![Lora: 915MHz](https://img.shields.io/badge/Lora-915MHz-success)
 
-This is an improved LoRaWAN v1.0 implementation in python.
+This is an improved LoRaWAN v1.0.3 implementation in python.
 
-It works with a Raspberry Pi 4 and the [Adafruit LoRa Radio Bonnet with OLED](https://www.adafruit.com/product/4074) - RFM95W @ 868MHz.
+It works with a Raspberry Pi 0 and the [Adafruit LoRa Radio Bonnet with OLED](https://www.adafruit.com/product/4074) - RFM95W @ 868MHz.
 
 Based on the work of ❤️
 - [mayeranalytics/pySX127x](https://github.com/mayeranalytics/pySX127x)
@@ -18,8 +18,6 @@ Based on the work of ❤️
 For reference on LoRa see: [lora-alliance: specification](https://www.lora-alliance.org/portals/0/specs/LoRaWAN%20Specification%201R0.pdf)
 
 This fork improves the support for the [Adafruit LoRA Radio Bonnet with OLED](https://www.adafruit.com/product/4074) - RFM95W @ 868MHz.
-
-You can find the access to the [Helium Network](https://helium.com) in the repository of [ryanzav](https://github.com/ryanzav/LoRaWAN).
 
 ---
 
@@ -32,36 +30,9 @@ You can find the access to the [Helium Network](https://helium.com) in the repos
 1. Add an antenna to the Lora Bonnet [p.e. "simple" Wire Antenna](https://learn.adafruit.com/adafruit-feather-m0-radio-with-lora-radio-module/antenna-options)
 1. Check your [environment](https://www.thethingsnetwork.org/map) and look for a public Lora Gateway
 
----
-
-## Testing
-
-### Sending
-
-    $ python3 tx_ttn.py
-
-Sends an uplink to your TTN-Application.
-
-### Receiving
-
-    $ python3 rx_ttn.py
-
-Receives a downlink from your TTN-Application. Attention: LoRaWAN does not send downlinks fulltime.
-
-### Send & Receive
-
-    $ python3 txrx_ttn.py
-
-Sends an uplink and receives directly after a downlink.
-
----
 
 ## Usage (TTN v2 and TTS v3)
 
-Now we use this library as a python package.
-Move the folder to your project: `$ mv ~/LoRaPy ~/your-project/LoRaPy`.
-Copy the `keys_example.py` to your project: `$ cp ~/LoRaPy ~/your-project/keys.py`
-and set the correct keys from your TTN-Console. 
 
 ### Example
 ```python
@@ -123,12 +94,4 @@ while True:
     try_to_send('this is your payload-string')
 ```
 
-## TODO
 
-- [x] Add a constant uplink-sender
-- [x] Add a constant uplink-sender with short downlink-check.
-- [x] Remove Helium
-- [x] TTN v3
-- [ ] Check OTAA for TTN
-- [ ] Prepare as python-library (p.e. PIP)
-- [ ] move `./LoRaWAN` & `./SX127x` to git submodule (if possible...)

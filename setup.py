@@ -11,11 +11,9 @@ setup(
   download_url = 'https://github.com/ColbySawyer7/LoRaPy/archive/refs/tags/v_0.3.tar.gz',    # I explain this later on
   keywords = ['LoRaWAN', 'Lora', 'Things Network', 'TTN', 'v3'],   # Keywords that define your package best
   install_requires=[            # I get to this in a second
-          'time',
           'RPi.GPIO',
           'spidev',
           'argparse',
-          'sys',
       ],
   classifiers=[
     'Development Status :: 3 - Alpha',      # Chose either "3 - Alpha", "4 - Beta" or "5 - Production/Stable" as the current state of your package

@@ -24,7 +24,7 @@ class LoRaPy(object):
     def setup_lora(self):
         self.lora_sender.set_mode(MODE.SLEEP)
         self.lora_sender.set_dio_mapping([1, 0, 0, 0, 0, 0])
-        self.lora_sender.set_freq(868.1)
+        self.lora_sender.set_freq(902.7)
         self.lora_sender.set_pa_config(pa_select=1)
         self.lora_sender.set_spreading_factor(7)
         self.lora_sender.set_pa_config(max_power=0x0F, output_power=0x0E)

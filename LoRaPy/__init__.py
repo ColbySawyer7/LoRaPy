@@ -1,2 +1,3 @@
-__all__ = ['lorapy', 'lorasender']
+from LoRaPy.lorapy import LoRaPy
+from LoRaPy.lorasender import LoRaSender
 

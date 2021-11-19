@@ -8,7 +8,7 @@
 
 This is an improved LoRaWAN v1.0.3 implementation in python.
 
-It works with a Raspberry Pi 0 and the [Adafruit LoRa Radio Bonnet with OLED](https://www.adafruit.com/product/4074) - RFM95W @ 868MHz.
+It works with a Raspberry Pi 0 and the [Adafruit LoRa Radio Bonnet with OLED](https://www.adafruit.com/product/4074) - RFM95W @ 915MHz.
 
 Based on the work of ❤️
 - [mayeranalytics/pySX127x](https://github.com/mayeranalytics/pySX127x)
@@ -18,7 +18,7 @@ Based on the work of ❤️
 
 For reference on LoRa see: [lora-alliance: specification](https://www.lora-alliance.org/portals/0/specs/LoRaWAN%20Specification%201R0.pdf)
 
-This fork improves the support for the [Adafruit LoRA Radio Bonnet with OLED](https://www.adafruit.com/product/4074) - RFM95W @ 868MHz.
+This fork improves the support for the [Adafruit LoRA Radio Bonnet with OLED](https://www.adafruit.com/product/4074) - RFM95W @ 915MHz.
 
 ---
 

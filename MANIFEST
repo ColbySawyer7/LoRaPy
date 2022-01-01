@@ -6,4 +6,3 @@ LoRaPy\counter.py
 LoRaPy\frame.py
 LoRaPy\lorapy.py
 LoRaPy\lorasender.py
-LoRaPy\reset_ada.py

@@ -4,14 +4,13 @@
 
 import sys
 from time import sleep
-from SX127x.LoRa import *
-from SX127x.LoRaArgumentParser import LoRaArgumentParser
-from SX127x.board_config_ada import BOARD
+from spi_lora.LoRa import *
+from spi_lora.LoRaArgumentParser import LoRaArgumentParser
+from spi_lora.boards.RPi_Adafruit4074 import BOARD
 import keys
 import counter
 import LoRaWAN
 from LoRaWAN.MHDR import MHDR
-import reset_ada
 
 BOARD.setup()
 parser = LoRaArgumentParser("LoRaWAN sendReceive")
@@ -19,7 +18,7 @@ parser = LoRaArgumentParser("LoRaWAN sendReceive")
 
 class LoRaWanSystem(LoRa):
     def __init__(self, devaddr = [], nwkey = [], appkey = [], verbose = False):
-        super(LoRaWanSystem, self).__init__(verbose)
+        super(LoRaWanSystem, self).__init__(board=BOARD, verbose=verbose)
         self.devaddr = devaddr
         self.nwkey = nwkey
         self.appkey = appkey

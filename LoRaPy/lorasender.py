@@ -1,20 +1,16 @@
-from SX127x.LoRa import *
-from SX127x.LoRaArgumentParser import LoRaArgumentParser
-from SX127x.board_config_ada import BOARD
+from spi_lora.LoRa import *
 import LoRaPy.counter as counter
 import LoRaWAN
 from LoRaWAN.MHDR import MHDR
-import LoRaPy.reset_ada as reset_ada
-
-reset_ada.reset()
-
-BOARD.setup()
-parser = LoRaArgumentParser("LoRaWAN sender")
-
 
 class LoRaSender(LoRa):
-    def __init__(self, devaddr=[], nwkey=[], appkey=[], verbose=False, callback=lambda *_, **__: None):
-        super(LoRaSender, self).__init__(verbose)
+    def __init__(self, devaddr=[], nwkey=[], appkey=[], verbose=False, callback=lambda *_, **__: None, board=None):
+        if board is None:
+            # Default to this board
+            from spi_lora.boards.RPi_Adafruit4074 import BOARD as board
+        board.setup()
+        board.reset()
+        super(LoRaSender, self).__init__(board=board, verbose=verbose)
         self.verbose = verbose
         self.devaddr = devaddr
         self.nwkey = nwkey

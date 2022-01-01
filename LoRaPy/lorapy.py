@@ -3,7 +3,7 @@ from LoRaPy.lorasender import LoRaSender
 
 
 class LoRaPy(object):
-    def __init__(self, dev_addr=[], nw_key=[], app_key=[], verbose=False, callback=lambda *_, **__: None):
+    def __init__(self, dev_addr=[], nw_key=[], app_key=[], verbose=False, callback=lambda *_, **__: None, board=None):
         """
         Construct a new 'LoRaPy' object.
 
@@ -12,8 +12,10 @@ class LoRaPy(object):
         :param app_key: list. The "AppSKey" from your device, given by thethings.network.
         :param verbose: bool. True if verbose informations should be printed to the console.
         :param callback: function. Callback-function to handle downlinks out of the the things stack.
+        :param board: class. spi-lora board configuration defining how the LoRa modem is connected.
         """
-        self.lora_sender = LoRaSender(dev_addr, nw_key, app_key, verbose, callback)
+        
+        self.lora_sender = LoRaSender(dev_addr, nw_key, app_key, verbose, callback, board)
         self.setup_lora()
 
         if verbose:

@@ -18,7 +18,7 @@ parser = LoRaArgumentParser("LoRaWAN sendReceive")
 
 class LoRaWanSystem(LoRa):
     def __init__(self, devaddr = [], nwkey = [], appkey = [], verbose = False):
-        super(LoRaWanSystem, self).__init__(verbose)
+        super(LoRaWanSystem, self).__init__(board=BOARD, verbose=verbose)
         self.devaddr = devaddr
         self.nwkey = nwkey
         self.appkey = appkey

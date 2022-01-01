@@ -17,7 +17,7 @@ parser = LoRaArgumentParser("LoRaWAN sender")
 
 class LoRaWANotaa(LoRa):
     def __init__(self, verbose = False):
-        super(LoRaWANotaa, self).__init__(verbose)
+        super(LoRaWANotaa, self).__init__(board=BOARD, verbose=verbose)
 
     def on_rx_done(self):
         print("RxDone")

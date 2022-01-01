@@ -1,4 +1,4 @@
-from SX127x.LoRa import *
+from spi_lora.LoRa import *
 from LoRaPy.lorasender import LoRaSender
 
 

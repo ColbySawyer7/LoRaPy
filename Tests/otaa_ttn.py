@@ -4,9 +4,9 @@
 
 import sys
 from time import sleep
-from SX127x.LoRa import *
-from SX127x.LoRaArgumentParser import LoRaArgumentParser
-from SX127x.board_config import BOARD
+from spi_lora.LoRa import *
+from spi_lora.LoRaArgumentParser import LoRaArgumentParser
+from spi_lora.board_config import BOARD
 import LoRaWAN
 import keys
 from LoRaWAN.MHDR import MHDR
